@@ -1,6 +1,7 @@
 package com.example.wf.Adapter;
 
 import com.example.wf.data.DailyWeather;
+import com.example.wf.data.Wind;
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
@@ -28,6 +29,7 @@ public class DailyWeather_Adapter extends TypeAdapter<DailyWeather> {
                 case "sys" -> dailyWeather.setSys(new Sys_Adapter().read(jsonReader));
                 case "dt_txt" -> dailyWeather.setDt_txt(jsonReader.nextString());
                 case "rain" -> dailyWeather.setRain(new Rain_Adapter().read(jsonReader));
+                case "wind" -> dailyWeather.setWinds(new Wind_Adapter().read(jsonReader));
                 default -> jsonReader.skipValue();
             }
         }

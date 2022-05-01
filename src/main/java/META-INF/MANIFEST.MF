@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: com.example.wf.Launcher
+Class-Path: javafx-base-18-ea+6.jar javafx-base-18-ea+6-win.jar javafx-c
+ ontrols-18-ea+6.jar gson-2.9.0.jar javafx-graphics-18-ea+6-win.jar java
+ fx-graphics-18-ea+6.jar javafx-controls-18-ea+6-win.jar javafx-fxml-18-
+ ea+6.jar javafx-fxml-18-ea+6-win.jar
+

@@ -10,7 +10,6 @@ import java.util.Scanner;
 
 public class HandleAPI {
     public static JsonResult getData(String city) {
-        city = "London";
         JsonResult jsonResult = new JsonResult();
         Gson gson = new GsonBuilder()
                 .registerTypeAdapter(JsonResult.class,new JsonResult_Adapter())
@@ -18,7 +17,7 @@ public class HandleAPI {
         try {
             URL url = new URL("http://api.openweathermap.org/data/2.5/forecast?q="
                     + city
-                    + "&APPID=bffca17bcb552b8c8e4f3b82f64cccd2&units=metric");
+                    + "&cnt=50&APPID=bffca17bcb552b8c8e4f3b82f64cccd2&units=metric");
             Scanner scanner = new Scanner(url.openStream());
             String jsonData = "";
             while (scanner.hasNextLine()) {
