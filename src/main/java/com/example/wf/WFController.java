@@ -90,25 +90,22 @@ public class WFController implements Initializable {
         icon4.setImage(new Image(getIcon(dailyWeather.get(35).getWeather().getMain())));
         icon5.setImage(new Image(getIcon(dailyWeather.get(39).getWeather().getMain())));
         todayIcon.setImage(new Image(getIcon(dailyWeather.get(1).getWeather().getMain())));
-//        Image image = new Image(getIcon(dailyWeather.get(9).getWeather().getMain()));
-//        icon3.setImage(image);
-//        img1.setImage(icon3);
     }
 
     private String getIcon(String weather) {
         System.out.println(weather);
         switch (weather) {
             case "Rain" -> {
-                return getClass().getResource("/com/example/wf/rainy-icon-1.jpg").toString();
+                return getClass().getResource("/com/example/wf/Rain.png").toString();
             }
             case "Clouds" -> {
-                return getClass().getResource("/com/example/wf/1163624.png").toString();
+                return getClass().getResource("/com/example/wf/Clouds.png").toString();
             }
             case "Snow" -> {
-                return getClass().getResource("/com/example/wf/bg.png").toString();
+                return getClass().getResource("/com/example/wf/Snow.png").toString();
             }
             case "Clear" -> {
-                return getClass().getResource("/com/example/wf/Sunny-icon.png").toString();
+                return getClass().getResource("/com/example/wf/Clear.png").toString();
             }
             default -> {
                 return getClass().getResource("/com/example/wf/Sunny-icon.png").toString();
