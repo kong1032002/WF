@@ -5,4 +5,6 @@ module com.example.wf {
 
     opens com.example.wf to javafx.fxml;
     exports com.example.wf;
+    exports com.example.wf.View;
+    opens com.example.wf.View to javafx.fxml;
 }

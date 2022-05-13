@@ -1,289 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="Container" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="720.0" style="-fx-background-color: #3983c4;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <HBox alignment="CENTER" prefHeight="304.0" prefWidth="690.0" style="-fx-background-color: #5b99d2;">
-         <children>
-            <VBox fx:id="weather_card1" layoutX="20.0" layoutY="20.0" prefHeight="210.0" prefWidth="330.0" style="-fx-background-color: white;">
-               <children>
-                  <Label fx:id="Time1" alignment="CENTER" prefHeight="47.0" prefWidth="338.0" style="-fx-background-color: #5b99d2;" text="Time" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Label>
-                  <HBox prefHeight="174.0" prefWidth="304.0">
-                     <children>
-                        <VBox fx:id="WeatherForecast1" prefHeight="116.0" prefWidth="157.0">
-                           <children>
-                              <Label fx:id="Weather1" alignment="CENTER" prefHeight="39.0" prefWidth="158.0" text="Weather" textFill="#5b99d2">
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="Temperature1" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="102.0" prefWidth="158.0" text="Temperature" textFill="#5b99d2">
-                                 <font>
-                                    <Font name="System Bold" size="20.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="Wind1" alignment="CENTER" layoutX="10.0" layoutY="49.0" prefHeight="39.0" prefWidth="158.0" text="Wind" textFill="#5b99d2">
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </VBox>
-                     </children>
-                  </HBox>
-                  <Label fx:id="City1" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="47.0" prefWidth="338.0" style="-fx-background-color: #5b99d2;" text="City" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </HBox.margin>
-            </VBox>
-            <VBox fx:id="weather_card11" layoutX="193.0" layoutY="10.0" prefHeight="210.0" prefWidth="330.0" style="-fx-background-color: white;">
-               <children>
-                  <Label fx:id="Time11" alignment="CENTER" prefHeight="47.0" prefWidth="338.0" style="-fx-background-color: #5b99d2;" text="Time" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Label>
-                  <HBox prefHeight="174.0" prefWidth="297.0">
-                     <children>
-                        <VBox fx:id="WeatherForecast11" prefHeight="116.0" prefWidth="157.0">
-                           <children>
-                              <Label fx:id="Weather11" alignment="CENTER" prefHeight="39.0" prefWidth="158.0" text="Weather" textFill="#5b99d2">
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="Temperature11" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="102.0" prefWidth="158.0" text="Temperature" textFill="#5b99d2">
-                                 <font>
-                                    <Font name="System Bold" size="20.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="Wind11" alignment="CENTER" layoutX="10.0" layoutY="49.0" prefHeight="39.0" prefWidth="158.0" text="Wind" textFill="#5b99d2">
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </VBox>
-                     </children>
-                  </HBox>
-                  <Label fx:id="City11" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="47.0" prefWidth="338.0" style="-fx-background-color: #5b99d2;" text="City" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </HBox.margin>
-            </VBox>
-         </children>
-         <VBox.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </VBox.margin>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </HBox>
-      <HBox alignment="CENTER" prefHeight="248.0" prefWidth="690.0" style="-fx-background-color: #5b99d2;">
-         <children>
-            <VBox prefHeight="231.0" prefWidth="46.0" style="-fx-background-color: white;">
-               <children>
-                  <Label alignment="CENTER" prefHeight="33.0" prefWidth="714.0" style="-fx-background-color: #5b99d2;" text="DAY" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <ImageView fitHeight="116.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <Label alignment="CENTER" layoutX="25.0" layoutY="25.0" prefHeight="34.0" prefWidth="685.0" style="-fx-background-color: #5b99d2;" text="Temperature" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </HBox.margin>
-            </VBox>
-            <VBox layoutX="10.0" layoutY="10.0" prefHeight="231.0" prefWidth="46.0" style="-fx-background-color: white;">
-               <children>
-                  <Label alignment="CENTER" prefHeight="33.0" prefWidth="714.0" style="-fx-background-color: #5b99d2;" text="DAY" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <ImageView fitHeight="116.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <Label alignment="CENTER" layoutX="25.0" layoutY="25.0" prefHeight="34.0" prefWidth="685.0" style="-fx-background-color: #5b99d2;" text="Temperature" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </HBox.margin>
-            </VBox>
-            <VBox layoutX="112.0" layoutY="10.0" prefHeight="231.0" prefWidth="46.0" style="-fx-background-color: white;">
-               <children>
-                  <Label alignment="CENTER" prefHeight="33.0" prefWidth="714.0" style="-fx-background-color: #5b99d2;" text="DAY" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <ImageView fitHeight="116.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <Label alignment="CENTER" layoutX="25.0" layoutY="25.0" prefHeight="34.0" prefWidth="685.0" style="-fx-background-color: #5b99d2;" text="Temperature" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </HBox.margin>
-            </VBox>
-            <VBox layoutX="213.0" layoutY="10.0" prefHeight="231.0" prefWidth="46.0" style="-fx-background-color: white;">
-               <children>
-                  <Label alignment="CENTER" prefHeight="33.0" prefWidth="714.0" style="-fx-background-color: #5b99d2;" text="DAY" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <ImageView fitHeight="116.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <Label alignment="CENTER" layoutX="25.0" layoutY="25.0" prefHeight="34.0" prefWidth="685.0" style="-fx-background-color: #5b99d2;" text="Temperature" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </HBox.margin>
-            </VBox>
-            <VBox layoutX="315.0" layoutY="10.0" prefHeight="231.0" prefWidth="46.0" style="-fx-background-color: white;">
-               <children>
-                  <Label alignment="CENTER" prefHeight="33.0" prefWidth="714.0" style="-fx-background-color: #5b99d2;" text="DAY" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <ImageView fitHeight="116.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <Label alignment="CENTER" layoutX="25.0" layoutY="25.0" prefHeight="34.0" prefWidth="685.0" style="-fx-background-color: #5b99d2;" text="Temperature" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                  </Label>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </HBox.margin>
-            </VBox>
-         </children>
-         <VBox.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </VBox.margin>
-      </HBox>
-   </children>
-   <padding>
-      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-   </padding>
-</VBox>
+
+<Label prefHeight="335.0" prefWidth="460.0" style="-fx-background-color: #373948;" text="Ui Nguyen Thanh Cong" textFill="WHITE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <font>
+      <Font name="System Bold" size="14.0" />
+   </font>
+</Label>

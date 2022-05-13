@@ -32,12 +32,22 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<Label prefHeight="335.0" prefWidth="460.0" style="-fx-background-color: #373948;" text="Ui Nguyen Thanh Cong" textFill="WHITE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
-   <font>
-      <Font name="System Bold" size="14.0" />
-   </font>
-</Label>
+<VBox alignment="CENTER" prefHeight="519.0" prefWidth="733.0" style="-fx-background-color: #21252b;"
+      xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wf.View.creatorController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+   </padding>
+   <Label fx:id="label" alignment="CENTER" prefHeight="545.0" prefWidth="764.0"
+          style="-fx-background-color: #373948; -fx-background-radius: 10px;"
+          text="Nguyễn Thành Công \n Chu Ngọc Chiến \n Trần Minh Hiếu \n Lê Xuân Dương" textAlignment="CENTER"
+          textFill="#f4f4f4">
+      <font>
+         <Font name="System Bold" size="14.0"/>
+      </font>
+   </Label>
+</VBox>
