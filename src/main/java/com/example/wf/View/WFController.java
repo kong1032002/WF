@@ -1,9 +1,11 @@
 package com.example.wf.View;
 
+import com.example.wf.Controller.API.HandleAPI;
 import com.example.wf.HelloApplication;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
@@ -22,6 +24,7 @@ public class WFController implements Initializable {
     public VBox defaultPanel;
     public VBox creatorPanel;
     public VBox forecastPanel;
+    public Label advise;
     private int selectedButton = 0;
 
     @Override
@@ -29,6 +32,13 @@ public class WFController implements Initializable {
         buttonEntered();
         buttonExited();
         buttonClick();
+        String weather = HandleAPI.getData("Hanoi").getDailyWeathers().get(2).getWeather().getMain();
+        System.out.println(weather);
+        switch (weather) {
+            case "Rain" -> advise.setText("Bạn nên phơi đồ trong nhà, ra ngoài nhớ mang theo ô nhé!");
+            case "Clear" -> advise.setText("Trời quang, thích hợp phơi đồ, nên thoa kem chống nắng khi ra ngoài khi trời sáng");
+            case "Clouds" -> advise.setText("Trời có mây!!!! Phù hợp cho các hoạt động ngoài trời, thể thao.");
+        }
         try {
             defaultPanel = new FXMLLoader(HelloApplication.class.getResource("defaultPanel.fxml")).load();
             creatorPanel = new FXMLLoader(HelloApplication.class.getResource("creatorPanel.fxml")).load();

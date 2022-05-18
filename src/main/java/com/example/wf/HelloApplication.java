@@ -13,15 +13,12 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("WF.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 880, 540);
-        String css = Objects.requireNonNull(HelloApplication.class.getResource("style.css")).toExternalForm();
-        scene.getStylesheets().add(css);
-        stage.setTitle("Hello!");
+        stage.setTitle("BrainStorm's Weather Forecast!");
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
         launch();
-//        System.out.println(HandleAPI.getData("London"));
     }
 }

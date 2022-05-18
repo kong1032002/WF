@@ -11,9 +11,12 @@ public class creatorController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        label.setText("Nguyễn Thành Công \n" +
-                "Chu Ngọc Chiến \n" +
-                "Trần Minh Hiếu \n" +
-                "Lê Xuân Dương \n");
+        label.setText("""
+                Các thành viên trong nhóm:\s
+                Nguyễn Thành Công\s
+                Chu Ngọc Chiến\s
+                Trần Minh Hiếu\s
+                Lê Xuân Dương\s
+                """);
     }
 }
