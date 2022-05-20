@@ -47,6 +47,7 @@ public class forecastController implements Initializable {
     public Label day5;
     public ImageView icon5;
     public Label temp5;
+    public Label country;
 
     public void selectCity(ActionEvent actionEvent) {
         String selectedCity = city.getSelectionModel().getSelectedItem();
@@ -63,6 +64,7 @@ public class forecastController implements Initializable {
         humidity.setText("Độ ẩm: " + dailyWeather.get(1).getMain().getHumidity() + "%");
         dayOfWeek.setText(LocalDate.now().getDayOfWeek().name());
         int now = LocalDate.now().getDayOfWeek().getValue();
+        country.setText( jsonResult.getCity().getName() + " - " + jsonResult.getCity().getCountry());
         day1.setText(DOW[(++now - 1) % 7]);
         day2.setText(DOW[(++now - 1) % 7]);
         day3.setText(DOW[(++now - 1) % 7]);

@@ -49,7 +49,7 @@
          </VBox.margin>
          <Image url="@1x/Asset%205.png" />
       </ImageView>
-      <Button fx:id="weatherButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="254.0" style="-fx-background-radius: 0px 100px 100px 0px; -fx-background-color: linear-gradient(to right bottom,  #17baff, #a629fe);" text="Weather Forecast" textFill="WHITE">
+      <Button fx:id="weatherButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="254.0" style="-fx-background-radius: 0px 100px 100px 0px; -fx-background-color: #294259; -fx-border-color: #726ffe; -fx-border-radius: 0px 100px 100px 0px;" text="Weather Forecast" textFill="WHITE">
          <VBox.margin>
             <Insets bottom="10.0" />
          </VBox.margin>

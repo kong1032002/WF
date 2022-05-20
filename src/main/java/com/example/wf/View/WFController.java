@@ -27,7 +27,7 @@ public class WFController implements Initializable {
     public VBox forecastPanel;
     public VBox errorPanel;
     public Label advise;
-    private int selectedButton = 0;
+    private int selectedButton = 4;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
