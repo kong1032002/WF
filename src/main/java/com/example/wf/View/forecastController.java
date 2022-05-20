@@ -2,6 +2,7 @@ package com.example.wf.View;
 
 import com.example.wf.Controller.API.HandleAPI;
 import com.example.wf.Model.DailyWeather;
+import com.example.wf.Model.JsonResult;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,10 +12,14 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 public class forecastController implements Initializable {
     private final String[] DOW = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
@@ -45,7 +50,11 @@ public class forecastController implements Initializable {
 
     public void selectCity(ActionEvent actionEvent) {
         String selectedCity = city.getSelectionModel().getSelectedItem();
-        List<DailyWeather> dailyWeather = HandleAPI.getData(selectedCity).getDailyWeathers();
+        JsonResult jsonResult = HandleAPI.getData(selectedCity);
+        if (jsonResult.getCod() != 200) {
+            return;
+        }
+        List<DailyWeather> dailyWeather = jsonResult.getDailyWeathers();
         temperature.setText(dailyWeather.get(1).getMain().getTemp() + " °C");
         wind.setText("Gió: " + dailyWeather.get(1).getWinds().getSpeed() + "m/s");
         date.setText(String.valueOf(dailyWeather.get(1).getDt_txt()));
@@ -54,7 +63,6 @@ public class forecastController implements Initializable {
         humidity.setText("Độ ẩm: " + dailyWeather.get(1).getMain().getHumidity() + "%");
         dayOfWeek.setText(LocalDate.now().getDayOfWeek().name());
         int now = LocalDate.now().getDayOfWeek().getValue();
-        System.out.println(DOW[now - 1]);
         day1.setText(DOW[(++now - 1) % 7]);
         day2.setText(DOW[(++now - 1) % 7]);
         day3.setText(DOW[(++now - 1) % 7]);
@@ -82,12 +90,11 @@ public class forecastController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ObservableList<String> observableList =
-                FXCollections.observableArrayList("hanoi", "saigon", "halong", "danang", "sydney");
+                FXCollections.observableArrayList(cities());
         city.setItems(observableList);
     }
 
     private String getIcon(String weather) {
-        System.out.println(weather);
         switch (weather) {
             case "Rain" -> {
                 return getClass().getResource("/com/example/wf/Rain.png").toString();
@@ -105,5 +112,22 @@ public class forecastController implements Initializable {
                 return getClass().getResource("/com/example/wf/Sunny-icon.png").toString();
             }
         }
+    }
+
+    public ArrayList<String> cities() {
+        Scanner scanner;
+        String url = "src\\main\\resources\\com\\example\\wf\\city.txt";
+        ArrayList<String> cities = new ArrayList<>();
+        FileInputStream fileInputStream;
+        try {
+            fileInputStream = new FileInputStream(url);
+            scanner = new Scanner(fileInputStream);
+            while (scanner.hasNextLine()) {
+                cities.add(scanner.nextLine());
+            }
+        } catch (IOException ex) {
+            System.out.println(-1);
+        }
+        return cities;
     }
 }

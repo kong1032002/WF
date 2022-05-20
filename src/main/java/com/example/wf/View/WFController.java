@@ -1,7 +1,8 @@
 package com.example.wf.View;
 
 import com.example.wf.Controller.API.HandleAPI;
-import com.example.wf.HelloApplication;
+import com.example.wf.Model.JsonResult;
+import com.example.wf.WeatherForecastApp;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -24,6 +25,7 @@ public class WFController implements Initializable {
     public VBox defaultPanel;
     public VBox creatorPanel;
     public VBox forecastPanel;
+    public VBox errorPanel;
     public Label advise;
     private int selectedButton = 0;
 
@@ -32,21 +34,26 @@ public class WFController implements Initializable {
         buttonEntered();
         buttonExited();
         buttonClick();
-        String weather = HandleAPI.getData("Hanoi").getDailyWeathers().get(2).getWeather().getMain();
-        System.out.println(weather);
+        JsonResult local = HandleAPI.getData("Hanoi");
+        try {
+            defaultPanel = new FXMLLoader(WeatherForecastApp.class.getResource("defaultPanel.fxml")).load();
+            creatorPanel = new FXMLLoader(WeatherForecastApp.class.getResource("creatorPanel.fxml")).load();
+            forecastPanel = new FXMLLoader(WeatherForecastApp.class.getResource("forecastPanel.fxml")).load();
+            errorPanel = new FXMLLoader(WeatherForecastApp.class.getResource("errorPanel.fxml")).load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (local.getCod() != 200 && local.getCod() != 404) {
+            mainPanel.getChildren().add(errorPanel);
+            return;
+        }
+        String weather = local.getDailyWeathers().get(2).getWeather().getMain();
         switch (weather) {
             case "Rain" -> advise.setText("Bạn nên phơi đồ trong nhà, ra ngoài nhớ mang theo ô nhé!");
             case "Clear" -> advise.setText("Trời quang, thích hợp phơi đồ, nên thoa kem chống nắng khi ra ngoài khi trời sáng");
             case "Clouds" -> advise.setText("Trời có mây!!!! Phù hợp cho các hoạt động ngoài trời, thể thao.");
         }
-        try {
-            defaultPanel = new FXMLLoader(HelloApplication.class.getResource("defaultPanel.fxml")).load();
-            creatorPanel = new FXMLLoader(HelloApplication.class.getResource("creatorPanel.fxml")).load();
-            forecastPanel = new FXMLLoader(HelloApplication.class.getResource("forecastPanel.fxml")).load();
-            mainPanel.getChildren().add(defaultPanel);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        mainPanel.getChildren().add(defaultPanel);
     }
 
     private void buttonEntered() {

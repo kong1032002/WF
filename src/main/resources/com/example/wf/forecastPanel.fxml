@@ -41,12 +41,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox prefHeight="540.0" prefWidth="778.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wf.View.forecastController">
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
    <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+      <Label prefHeight="35.0" prefWidth="95.0" text="Select city:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
       <ComboBox fx:id="city" onAction="#selectCity" prefHeight="35.0" prefWidth="640.0" />
    </HBox>
    <HBox prefHeight="444.0" prefWidth="748.0">
@@ -61,12 +65,12 @@
             <padding>
                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </padding>
-            <Label fx:id="temperature" alignment="BOTTOM_CENTER" prefHeight="122.0" prefWidth="581.0" text="37" textFill="WHITE">
+            <Label fx:id="temperature" alignment="BOTTOM_CENTER" prefHeight="122.0" prefWidth="581.0" text="Temp" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="48.0" />
                </font>
             </Label>
-            <Label fx:id="weather" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="69.0" prefWidth="452.0" text="Cloud &amp; sunshine" textFill="WHITE">
+            <Label fx:id="weather" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="69.0" prefWidth="452.0" text="Weather" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -76,7 +80,7 @@
             <padding>
                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </padding>
-            <Label fx:id="date" alignment="TOP_CENTER" prefHeight="21.0" prefWidth="336.0" text="Detail" textFill="WHITE" underline="true">
+            <Label fx:id="date" alignment="TOP_CENTER" prefHeight="21.0" prefWidth="336.0" text="Today" textFill="WHITE" underline="true">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -86,22 +90,22 @@
                   <Image url="@1163624.png" />
                </ImageView>
                <VBox prefHeight="182.0" prefWidth="258.0">
-                  <Label fx:id="dayOfWeek" alignment="CENTER" prefHeight="30.0" prefWidth="317.0" text="Sunday" textFill="WHITE">
+                  <Label fx:id="dayOfWeek" alignment="CENTER" prefHeight="30.0" prefWidth="317.0" text="Day of week" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="description" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="93.0" prefWidth="122.0" style="-fx-wrap-text: true;" text="Cloud" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="description" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="86.0" prefWidth="215.0" style="-fx-wrap-text: true;" text="Weather detail" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="wind" alignment="CENTER" layoutX="10.0" layoutY="40.0" prefHeight="37.0" prefWidth="122.0" text="Gió: 10km/h" textFill="WHITE">
+                  <Label fx:id="wind" alignment="CENTER" layoutX="10.0" layoutY="40.0" prefHeight="34.0" prefWidth="269.0" text="Wind" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="humidity" alignment="CENTER" layoutX="10.0" layoutY="71.0" prefHeight="42.0" prefWidth="122.0" text="Độ ẩm: 30%" textFill="WHITE">
+                  <Label fx:id="humidity" alignment="CENTER" layoutX="10.0" layoutY="71.0" prefHeight="38.0" prefWidth="237.0" text="Humidity" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
