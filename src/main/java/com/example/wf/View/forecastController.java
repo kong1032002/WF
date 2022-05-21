@@ -54,6 +54,9 @@ public class forecastController implements Initializable {
         String selectedCity = city.getSelectionModel().getSelectedItem();
         JsonResult jsonResult = HandleAPI.getData(selectedCity);
         if (jsonResult.getCod() != 200) {
+            if (jsonResult.getCod() == 404) {
+                country.setText("City is not found!");
+            }
             return;
         }
         List<DailyWeather> dailyWeather = jsonResult.getDailyWeathers();

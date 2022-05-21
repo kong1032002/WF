@@ -47,12 +47,6 @@ public class WFController implements Initializable {
             mainPanel.getChildren().add(errorPanel);
             return;
         }
-        String weather = local.getDailyWeathers().get(2).getWeather().getMain();
-        switch (weather) {
-            case "Rain" -> advise.setText("Bạn nên phơi đồ trong nhà, ra ngoài nhớ mang theo ô nhé!");
-            case "Clear" -> advise.setText("Trời quang, thích hợp phơi đồ, nên thoa kem chống nắng khi ra ngoài khi trời sáng");
-            case "Clouds" -> advise.setText("Trời có mây!!!! Phù hợp cho các hoạt động ngoài trời, thể thao.");
-        }
         mainPanel.getChildren().add(defaultPanel);
     }
 
