@@ -40,7 +40,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="880.0" style="-fx-background-color: #21252b; -fx-border-radius: 10px;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wf.View.WFController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="880.0" style="-fx-background-color: #21252b; -fx-border-radius: 10px;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wf.View.ControlPanel">
    <VBox alignment="TOP_CENTER" prefHeight="519.0" prefWidth="215.0">
       <ImageView fitHeight="140.0" fitWidth="115.0">
          <VBox.margin>

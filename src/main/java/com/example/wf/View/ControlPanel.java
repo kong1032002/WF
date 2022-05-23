@@ -6,14 +6,13 @@ import com.example.wf.WeatherForecastApp;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class WFController implements Initializable {
+public class ControlPanel implements Initializable {
     private static final String SelectedButton = "-fx-background-radius:  0px 100px 100px 0px; -fx-background-color: linear-gradient(to right bottom,  #17baff, #a629fe);";
     private static final String NonSelectedButton = "-fx-background-radius:  0px 100px 100px 0px; -fx-background-color: #294259; -fx-border-color: #726ffe; -fx-border-radius: 0px 100px 100px 0px;";
     private static final String EnteredButton = "-fx-background-radius:  0px 100px 100px 0px; -fx-background-color: #17baff;";
@@ -26,7 +25,7 @@ public class WFController implements Initializable {
     public VBox creatorPanel;
     public VBox forecastPanel;
     public VBox errorPanel;
-    public Label advise;
+    public VBox taskPanel;
     private int selectedButton = 4;
 
     @Override
@@ -39,16 +38,20 @@ public class WFController implements Initializable {
             defaultPanel = new FXMLLoader(WeatherForecastApp.class.getResource("defaultPanel.fxml")).load();
             creatorPanel = new FXMLLoader(WeatherForecastApp.class.getResource("creatorPanel.fxml")).load();
             forecastPanel = new FXMLLoader(WeatherForecastApp.class.getResource("forecastPanel.fxml")).load();
+            taskPanel = new FXMLLoader(WeatherForecastApp.class.getResource("taskPanel.fxml")).load();
             errorPanel = new FXMLLoader(WeatherForecastApp.class.getResource("errorPanel.fxml")).load();
+            mainPanel.getChildren().add(defaultPanel);
+//            mainPanel.getChildren().add(taskPanel);
+//            mainPanel.getChildren().add(creatorPanel);
+//            mainPanel.getChildren().add(errorPanel);
         } catch (IOException e) {
             e.printStackTrace();
         }
         if (local.getCod() != 200 && local.getCod() != 404) {
-            mainPanel.getChildren().add(errorPanel);
             return;
         }
-        mainPanel.getChildren().add(defaultPanel);
     }
+
 
     private void buttonEntered() {
         weatherButton.setOnMouseEntered(e -> {
@@ -102,6 +105,8 @@ public class WFController implements Initializable {
             taskButton.setStyle(SelectedButton);
             weatherButton.setStyle(NonSelectedButton);
             creatorButton.setStyle(NonSelectedButton);
+            mainPanel.getChildren().removeAll(mainPanel.getChildren());
+            mainPanel.getChildren().add(taskPanel);
             selectedButton = 1;
         });
 

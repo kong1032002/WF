@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class errorController implements Initializable {
+public class ErrorPanel implements Initializable {
     public Label label;
 
     public void internetError() {

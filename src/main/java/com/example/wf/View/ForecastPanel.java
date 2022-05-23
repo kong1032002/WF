@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-public class forecastController implements Initializable {
+public class ForecastPanel implements Initializable {
     private final String[] DOW = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
     public Label temperature;
     public Label weather;

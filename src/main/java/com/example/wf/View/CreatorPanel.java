@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class creatorController implements Initializable {
+public class CreatorPanel implements Initializable {
     public Label label;
 
     @Override
