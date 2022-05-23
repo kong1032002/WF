@@ -1,12 +1,10 @@
 Abidjan
-Yamoussoukro
 Abu Dhabi
 Abuja
 Accra
 Adamstown
 Addis Ababa
 Aden
-Sana'a
 Algiers
 Alofi
 Amman
@@ -37,11 +35,8 @@ Bern
 Bishkek
 Bissau
 Bloemfontein
-Cape Town
-Pretoria
 Bogotá
 Brades
-Plymouth
 Brasília
 Bratislava
 Brazzaville
@@ -50,49 +45,44 @@ Brussels
 Bucharest
 Budapest
 Buenos Aires
+Bujumbura
 Cairo
 Canberra
+Cape Town
 Caracas
 Castries
 Cetinje
-Podgorica
 Charlotte Amalie
 Chișinău
 Cockburn Town
 Colombo
-Sri Jayawardenepura Kotte
 Conakry
 Copenhagen
 Cotonou
-Porto-Novo
 Dakar
 Damascus
-danang
+Danang
 Dar es Salaam
-Dodoma
 Dhaka
 Dili
 Djibouti
+Dodoma
 Doha
 Douglas
 Dublin
 Dushanbe
 El Aaiún
-Tifariti
 Flying Fish Cove
 Freetown
 Funafuti
 Gaborone
 George Town
-Georgetown
-Georgetown
 Gibraltar
 Gitega
-Bujumbura
 Guatemala City
 Gustavia
 Hagåtña
-haiphong
+Haiphong
 Hamilton
 Hanoi
 Harare
@@ -104,31 +94,25 @@ Islamabad
 Jakarta
 Jamestown
 Jerusalem
-Ramallah
 Juba
 Kabul
 Kampala
 Kathmandu
 Khartoum
 Kigali
-King Edward Point
-Kingston
 Kingston
 Kingstown
 Kinshasa
 Kuala Lumpur
-Putrajaya
 Kuwait City
 Kyiv
 La Paz
-Sucre
 Libreville
 Lilongwe
 Lima
 Lisbon
 Ljubljana
 Lobamba
-Mbabane
 Lomé
 London
 Luanda
@@ -146,6 +130,7 @@ Mariehamn
 Marigot
 Maseru
 Mata Utu
+Mbabane
 Mexico City
 Minsk
 Mogadishu
@@ -160,12 +145,10 @@ Nassau
 Naypyidaw
 N'Djamena
 New Delhi
-Ngerulmud
 Niamey
 Nicosia
 Nouakchott
 Nouméa
-Nukuʻalofa
 Nur-Sultan
 Nuuk
 Oranjestad
@@ -180,31 +163,37 @@ Paramaribo
 Paris
 Philipsburg
 Phnom Penh
+Plymouth
+Podgorica
 Port Louis
 Port Moresby
 Port of Spain
 Port Vila
 Port-au-Prince
+Porto-Novo
 Prague
 Praia
+Pretoria
 Pristina
+Putrajaya
 Pyongyang
 Quito
 Rabat
+Ramallah
 Reykjavík
 Riga
 Riyadh
 Road Town
 Rome
 Roseau
-saigon
+Saigon
 Saipan
 San José
 San Juan
 San Marino
 San Salvador
+Sana'a
 Santiago
-Valparaíso
 Santo Domingo
 São Tomé
 Sarajevo
@@ -213,14 +202,14 @@ Singapore
 Skopje
 Sofia
 South Tarawa
+Sri Jayawardenepura Kotte
 St. George's
-St. Helier
 St. John's
-St. Peter Port
 St. Pierre
 Stanley
 Stepanakert
 Stockholm
+Sucre
 Sukhumi
 Suva
 Taipei
@@ -229,6 +218,7 @@ Tashkent
 Tbilisi
 Tegucigalpa
 Tehran
+The Valley
 Thimphu
 Tirana
 Tiraspol
@@ -240,7 +230,7 @@ Tunis
 Ulaanbaatar
 Vaduz
 Valletta
-The Valley
+Valparaíso
 Vatican City
 Victoria
 Vienna
@@ -252,6 +242,7 @@ Wellington
 West Island
 Willemstad
 Windhoek
+Yamoussoukro
 Yaoundé
 Yaren
 Yerevan
